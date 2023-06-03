@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, Text, TextInput, TouchableOpacity, Alert, Pressable, ImageBackground, ScrollView } from "react-native";
+import { View, StyleSheet, Text, TextInput, TouchableOpacity, Alert, Pressable, Image, ScrollView } from "react-native";
 import md5 from 'md5';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -39,9 +39,17 @@ function Login(props) {
     return (
         <View style={styles.container}>
             <ScrollView  >
-               
-                    <Text style={styles.title}>Sign In</Text>
-                    
+                <View style={styles.header}>
+                    <View style={{flex:1}}>
+                        <Text style={styles.title}>Sign In</Text>
+                    </View>
+                    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+                        <View style={[styles.shadow,{borderColor:'black',borderWidth:3, borderRadius:15, padding:20, backgroundColor:'white'}]}>
+                            <Image source={require("../image/warehouse.png")} />
+                        </View>
+                    </View>
+                </View>
+                <View style={styles.bottom}>
                     <TextInput style={styles.input}
                         underlineColorAndroid="transparent"
                         placeholder="Enter User ID"
@@ -61,7 +69,7 @@ function Login(props) {
                             value={password}
                             onChangeText={setUserPassword}
                         />
-                        <Icon style={styles.eye}  name={passwordVisible ? "eye" : "eye-slash"}  onPress={() => setPasswordVisible(!passwordVisible)} size={15} color="#232323" />
+                        <Icon style={styles.eye} name={passwordVisible ? "eye" : "eye-slash"} onPress={() => setPasswordVisible(!passwordVisible)} size={15} color="#232323" />
                     </View>
 
                     <TouchableOpacity
@@ -73,20 +81,27 @@ function Login(props) {
                     <TouchableOpacity onPress={changeLogin}>
                         <Text style={styles.register} > Register now </Text>
                     </TouchableOpacity>
-   
+                </View>
+
             </ScrollView>
         </View>
-
-
-
     )
 }
 
 const styles = StyleSheet.create({
 
     container: {
-       
         flex: 1,
+    },
+    header: {
+        flex: 2,
+        marginTop: 100,
+        marginBottom: 100
+    },
+    bottom: {
+        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
     input: {
         padding: 10,
@@ -95,9 +110,8 @@ const styles = StyleSheet.create({
         borderColor: '#545B77',
         borderWidth: 2,
         borderRadius: 15,
-        width: '90%',
         fontSize: 18,
-        color:'black'
+        color: 'black'
 
     },
     submitButton: {
@@ -106,7 +120,8 @@ const styles = StyleSheet.create({
         margin: 15,
         height: 60,
         borderRadius: 15,
-        justifyContent: 'center'
+        justifyContent: 'center',
+
     },
     submitButtonText: {
         color: 'white',
@@ -119,25 +134,24 @@ const styles = StyleSheet.create({
         fontSize: 90,
         margin: 30,
         color: '#5C8984',
-        marginBottom:70
+        marginBottom: 70
     },
     password_container: {
-
-        width: '100%',
+        flex: 1,
+        margin: 15,
         flexDirection: 'row',
         alignItems: 'center',
-
     },
     password_input: {
+        width: '100%',
         padding: 10,
-        margin: 15,
         height: 60,
         borderColor: '#545B77',
         borderWidth: 2,
         borderRadius: 15,
-        width: '90%',
         fontSize: 18,
-        color:'black'
+        color: 'black',
+
     },
     eye: {
         margin: -50,
@@ -148,7 +162,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 20,
     },
-   
+    shadow: {
+        shadowColor: 'black',
+        shadowOffset: { width: 5, height: 10 },
+        shadowOpacity: 50,
+        shadowRadius: 20,
+        elevation: 30,
+    },
 
 
 })

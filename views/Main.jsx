@@ -1,11 +1,9 @@
 import React from "react";
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image,LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome'
 
 import 'react-native-gesture-handler';
 import Login from "./Login";
@@ -13,12 +11,13 @@ import ListUsers from "./ListUsers";
 import Register from "./Register";
 import Camera from "./Camera";
 import Menu from "./Menu";
+import Camera1 from "./Camera1";
 import Import from "./Import";
-import Export from "./Export";
+import Thongke from "./Thongke";
+
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
-
 function MyTabs() {
   return (
     <Tab.Navigator useLegacyImplementation initialRouteName="Menu">
@@ -40,13 +39,13 @@ function Drawer1() {
       <Drawer.Screen name="Nhập vật tư" component={Import} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/import.png")} />
       }} />
-      <Drawer.Screen name="Xuất vật tư" component={Export} options={{
+      <Drawer.Screen name="Xuất vật tư" component={Thongke} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/export.png")} />
       }} />
-      <Drawer.Screen name="Thống kê kho" component={MyTabs} options={{
+      <Drawer.Screen name="Thống kê kho" component={Camera1} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/statistics.png")} />
       }} />
-      <Drawer.Screen name="Thẻ kho" component={MyTabs} options={{
+      <Drawer.Screen name="Thẻ kho" component={Camera1} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/planning.png")} />
       }} />
       <Drawer.Screen name="Giao hàng" component={MyTabs} options={{

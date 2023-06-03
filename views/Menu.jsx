@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Image, View, TouchableOpacity } from "react-native";
 import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
-
-
 function Menu(props) {
     return (
         <View style={styles.container}>
