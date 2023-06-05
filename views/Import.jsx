@@ -8,11 +8,15 @@ import Register from './Register';
 import Camera1 from './Camera1';
 import Camera from './Camera';
 import Thongke from './Thongke';
-
+import Detail from './Detail';
+import QC from './QC';
+import Nhapkho from './Nhapkho';
+import ImportSheflERP from './ImportSheflERP';
 LogBox.ignoreLogs(['Failed prop type: Invalid prop `textStyle` of type `array` supplied to `Cell`, expected `object`.']);
 
-const Import = () => {
+const Import = ({ navigation }) => {
 
+    const [chuyentrang,setChuyenTrang] = useState('1')
     const [tableHead, setTableHead] = useState(
         [
             'Mã QR',
@@ -105,6 +109,10 @@ const Import = () => {
     const [shelf_CheckBox, setshelf_CheckBox] = useState(false)
     const [visible, setVisible] = useState(false);
     const [visibleThongKe, setVisibleThongKe] = useState(false);
+    const [visibleDetail, setVisibleDetail] = useState(false);
+    const [visibleQC, setVisibleQC] = useState(false);
+    const [visibleNhapkho, setVisibleNhapkho] = useState(false);
+    const [visibleImportSheflERP, setVisibleImportSheflERP] = useState(false);
 
     const showModalCamera = () => setVisible(true);
     const hideModalCamera = () => setVisible(false);
@@ -112,6 +120,17 @@ const Import = () => {
     const showModalThongKe = () => setVisibleThongKe(true);
     const hideModalThongKe = () => setVisibleThongKe(false);
 
+    const showModalDetail = () => setVisibleDetail(true);
+    const hideModalDetail = () => setVisibleDetail(false);
+ 
+    const showModalQC = () => setVisibleQC(true);
+    const hideModalQC = () => setVisibleQC(false);
+
+    const showModalNhapkho = () => setVisibleNhapkho(true);
+    const hideModalNhapkho = () => setVisibleNhapkho(false);
+
+    const showModalImportSheflERP = () => setVisibleImportSheflERP(true);
+    const hideModalImportSheflERP = () => setVisibleImportSheflERP(false);
 
     const containerStyle = { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', padding: 20, margin: 250, borderRadius: 20, marginLeft: 300, marginRight: 300 };
     const containerStyle1 = { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', padding: 20, margin: 50, borderRadius: 20 };
@@ -207,26 +226,26 @@ const Import = () => {
                                                 <TouchableOpacity style={[styles.button, styles.shadow]}>
                                                     <Text style={styles.button_text}>Xuất kho ERP</Text>
                                                 </TouchableOpacity>
-                                                <TouchableOpacity style={[styles.button, styles.shadow]}>
+                                                <TouchableOpacity style={[styles.button, styles.shadow]} onPress={showModalImportSheflERP}>
                                                     <Text style={styles.button_text}>Nhập kệ ERP</Text>
                                                 </TouchableOpacity>
                                             </ScrollView>
                                         </View>
                                         <View style={styles.function_bottom_right_2}>
                                             <ScrollView horizontal>
-                                                <TouchableOpacity style={[styles.button, styles.shadow]} >
+                                                <TouchableOpacity style={[styles.button, styles.shadow]} onPress={showModalDetail}>
                                                     <Text style={styles.button_text}>Thông tin</Text>
                                                 </TouchableOpacity>
                                                 <TouchableOpacity style={[styles.button, styles.shadow]} onPress={showModalThongKe}>
                                                     <Text style={styles.button_text}>Thống kê</Text>
                                                 </TouchableOpacity>
-                                                <TouchableOpacity style={[styles.button, styles.shadow]}>
+                                                <TouchableOpacity style={[styles.button, styles.shadow]}  onPress={() => navigation.navigate('Kiểm kê',{chuyentrang})}>
                                                     <Text style={styles.button_text}>Kiểm kê</Text>
                                                 </TouchableOpacity>
-                                                <TouchableOpacity style={[styles.button, styles.shadow]}>
+                                                <TouchableOpacity style={[styles.button, styles.shadow]} onPress={showModalQC}>
                                                     <Text style={styles.button_text}>QC</Text>
                                                 </TouchableOpacity>
-                                                <TouchableOpacity style={[styles.button, styles.shadow]}>
+                                                <TouchableOpacity style={[styles.button, styles.shadow]} onPress={showModalNhapkho}>
                                                     <Text style={styles.button_text}>Nhập kho</Text>
                                                 </TouchableOpacity>
                                             </ScrollView>
@@ -266,12 +285,24 @@ const Import = () => {
                 </View>
                 <Portal>
                     <Modal visible={visible} onDismiss={hideModalCamera} contentContainerStyle={containerStyle}>
+                        <ScrollView>
                             <Camera1 callback={handleModalData} />
+                        </ScrollView>
                     </Modal>
                     <Modal visible={visibleThongKe} onDismiss={hideModalThongKe} contentContainerStyle={containerStyle1}>
-                        <ScrollView>
-                            <Thongke />
-                        </ScrollView>
+                        <Thongke hidemodal={hideModalThongKe}/>
+                    </Modal>
+                    <Modal visible={visibleDetail} onDismiss={hideModalDetail} contentContainerStyle={containerStyle1}>
+                        <Detail hidemodal={hideModalDetail}/>
+                    </Modal>
+                    <Modal visible={visibleQC} onDismiss={hideModalQC} contentContainerStyle={containerStyle1}>
+                        <QC hidemodal={hideModalQC}/>
+                    </Modal>
+                    <Modal visible={visibleNhapkho} onDismiss={hideModalNhapkho} contentContainerStyle={containerStyle1}>
+                        <Nhapkho hidemodal={hideModalNhapkho}/>
+                    </Modal>
+                    <Modal visible={visibleImportSheflERP} onDismiss={hideModalImportSheflERP} contentContainerStyle={containerStyle1}>
+                        <ImportSheflERP hidemodal={hideModalImportSheflERP}/>
                     </Modal>
                 </Portal>
 
@@ -283,7 +314,7 @@ const Import = () => {
 const styles = StyleSheet.create({
     container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#FBFFDC' },
     header: {},
-    text: { textAlign: 'center', fontWeight: '300', color: 'black', fontSize: 20, },
+    text: { textAlign: 'center', fontWeight: '400', color: 'black', fontSize: 20, },
     text_function: { textAlign: 'center', fontWeight: '400', color: 'black', fontSize: 20, },
     dataWrapper: { marginTop: -1 },
     row: {},

@@ -14,6 +14,8 @@ import Menu from "./Menu";
 import Camera1 from "./Camera1";
 import Import from "./Import";
 import Thongke from "./Thongke";
+import Kiemke from "./Kiemke";
+import ListImport from "./ListImport";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -39,7 +41,7 @@ function Drawer1() {
       <Drawer.Screen name="Nhập vật tư" component={Import} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/import.png")} />
       }} />
-      <Drawer.Screen name="Xuất vật tư" component={Thongke} options={{
+      <Drawer.Screen name="Xuất vật tư" component={ListImport} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/export.png")} />
       }} />
       <Drawer.Screen name="Thống kê kho" component={Camera1} options={{
@@ -51,7 +53,7 @@ function Drawer1() {
       <Drawer.Screen name="Giao hàng" component={MyTabs} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/transfer.png")} />
       }} />
-       <Drawer.Screen name="Kiểm kê" component={MyTabs} options={{
+       <Drawer.Screen name="Kiểm kê" component={Kiemke} options={{
         drawerIcon: config => <Image style={styles.box_image} source={require("../image/planning.png")} />
       }} />
        <Drawer.Screen name="In khác" component={MyTabs} options={{

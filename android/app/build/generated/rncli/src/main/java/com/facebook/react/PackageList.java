@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.reactnativecommunity.blurview.BlurViewPackage;
 // @react-native-community/checkbox
 import com.reactnativecommunity.checkbox.ReactCheckBoxPackage;
+// @react-native-community/datetimepicker
+import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
 // react-native-gesture-handler
@@ -76,6 +78,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new BlurViewPackage(),
       new ReactCheckBoxPackage(),
+      new RNDateTimePickerPackage(),
       new RNCameraPackage(),
       new RNGestureHandlerPackage(),
       new RNPermissionsPackage(),

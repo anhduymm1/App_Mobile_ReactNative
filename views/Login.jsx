@@ -44,7 +44,7 @@ function Login(props) {
                         <Text style={styles.title}>Sign In</Text>
                     </View>
                     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-                        <View style={[styles.shadow,{borderColor:'black',borderWidth:3, borderRadius:15, padding:20, backgroundColor:'white'}]}>
+                        <View style={[styles.shadow,{borderColor:'black',borderWidth:3,padding:70,borderRadius:500, backgroundColor:'white'}]}>
                             <Image source={require("../image/warehouse.png")} />
                         </View>
                     </View>
@@ -161,6 +161,7 @@ const styles = StyleSheet.create({
         color: 'blue',
         textAlign: 'center',
         marginTop: 20,
+        marginBottom:20
     },
     shadow: {
         shadowColor: 'black',

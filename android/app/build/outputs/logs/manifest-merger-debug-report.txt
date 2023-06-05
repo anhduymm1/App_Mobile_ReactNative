@@ -10,6 +10,7 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] C:\Users\Anh Du
 MERGED from [com.facebook.flipper:flipper:0.125.0] C:\Users\Anh Duy\.gradle\caches\transforms-3\1de5dee59d1627955e42d3d6205f726e\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:8:1-18:12
 MERGED from [:react-native-community_blur] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\blur\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_checkbox] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_datetimepicker] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-camera] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-gesture-handler] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-permissions] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-permissions\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -150,6 +151,8 @@ application
 ADDED from C:\Users\Anh Duy\Desktop\app\App1\android\app\src\main\AndroidManifest.xml:8:5-27:19
 MERGED from C:\Users\Anh Duy\Desktop\app\App1\android\app\src\main\AndroidManifest.xml:8:5-27:19
 MERGED from C:\Users\Anh Duy\Desktop\app\App1\android\app\src\main\AndroidManifest.xml:8:5-27:19
+MERGED from [:react-native-community_datetimepicker] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
+MERGED from [:react-native-community_datetimepicker] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-android:0.71.8] C:\Users\Anh Duy\.gradle\caches\transforms-3\22566865d31ef74cdd0cb020b75ed98d\transformed\jetified-react-android-0.71.8-debug\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-android:0.71.8] C:\Users\Anh Duy\.gradle\caches\transforms-3\22566865d31ef74cdd0cb020b75ed98d\transformed\jetified-react-android-0.71.8-debug\AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.4] C:\Users\Anh Duy\.gradle\caches\transforms-3\fda04c29f37516b0434cb97f63a52366\transformed\jetified-soloader-0.10.4\AndroidManifest.xml:11:5-20
@@ -254,6 +257,8 @@ MERGED from [:react-native-community_blur] C:\Users\Anh Duy\Desktop\app\App1\nod
 MERGED from [:react-native-community_blur] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\blur\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_checkbox] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_checkbox] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\checkbox\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_datetimepicker] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_datetimepicker] C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-camera\android\build\intermediates\merged_manifest\generalDebug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41

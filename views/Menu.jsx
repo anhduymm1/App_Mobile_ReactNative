@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Image, View, TouchableOpacity } from "react-native";
 import { Text } from "react-native-paper";
 import { BlurView } from "@react-native-community/blur";
+import Kiemke from "./Kiemke";
 function Menu(props) {
     return (
         <View style={styles.container}>
-            <ScrollView>
+            <ScrollView horizontal>
                 <View style={[styles.view_flex]}>
                     <View style={[styles.box, styles.shadow]}>
                         <TouchableOpacity onPress={()=>{props.navigation.navigate('Nhập vật tư')}}>
@@ -42,7 +43,7 @@ function Menu(props) {
                         </TouchableOpacity>
                     </View>
                     <View style={[styles.box, styles.shadow]}>
-                        <TouchableOpacity style={styles.box}>
+                        <TouchableOpacity style={styles.box} onPress={()=>{props.navigation.navigate('Kiểm kê')}}>
                             <Image source={require("../image/checklist.png")} style={styles.box_image} />
                             <Text style={styles.tittle}>Kiểm kê</Text>
                         </TouchableOpacity>
@@ -97,25 +98,25 @@ function Menu(props) {
 }
 const styles = StyleSheet.create({
     container: {
+        flexDirection:"row",
         flex: 1,
         justifyContent: "center",
         backgroundColor:'#FBFFDC'
     },
     view_flex: {
-        flexDirection: 'row',
-        justifyContent: "space-evenly",
+        justifyContent: "space-between",
         alignContent: "center",
-        margin: 10
+        margin: 10,
+        width:300
     },
     box: {
-
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
         margin: 5,
         padding: 10,
         height: 150,
-        borderRadius: 20,
+        borderRadius: 30,
         backgroundColor: 'white',
         textAlign: "center",
     },
@@ -127,8 +128,8 @@ const styles = StyleSheet.create({
         elevation: 30,
     },
     box_image: {
-        height: 80,
-        width: 80,
+        height: 100,
+        width: 100,
         resizeMode: "cover",
         justifyContent: 'center',
         alignItems: 'center',
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     },
     tittle: {
         marginTop: 10,
-        fontSize: 18,
+        fontSize: 21,
         fontWeight: "700",
         textAlign: 'center'
     },

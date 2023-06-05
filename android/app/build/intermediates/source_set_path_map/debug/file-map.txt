@@ -35,9 +35,11 @@ com.app1.app-merged_res-33 C:\Users\Anh Duy\Desktop\app\App1\android\app\build\i
 com.app1.app-debug-34 C:\Users\Anh Duy\Desktop\app\App1\android\app\src\debug\res
 com.app1.app-main-35 C:\Users\Anh Duy\Desktop\app\App1\android\app\src\main\res
 com.app1.app-packaged_res-36 C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\blur\android\build\intermediates\packaged_res\debug
-com.app1.app-packaged_res-37 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-camera\android\build\intermediates\packaged_res\generalDebug
-com.app1.app-packaged_res-38 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
-com.app1.app-packaged_res-39 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-permissions\android\build\intermediates\packaged_res\debug
-com.app1.app-packaged_res-40 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
-com.app1.app-packaged_res-41 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
-com.app1.app-packaged_res-42 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-37 C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\checkbox\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-38 C:\Users\Anh Duy\Desktop\app\App1\node_modules\@react-native-community\datetimepicker\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-39 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-camera\android\build\intermediates\packaged_res\generalDebug
+com.app1.app-packaged_res-40 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-41 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-permissions\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-42 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-43 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.app1.app-packaged_res-44 C:\Users\Anh Duy\Desktop\app\App1\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug

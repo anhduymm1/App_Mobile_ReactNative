@@ -7,7 +7,6 @@ function Camera1({callback}) {
   const [qrcode,setQRCode] = useState('')
 
 
-
   const handleBarCodeScanned =  ({ type, data }) => {
      setQRCode(data)
      callback(data);
@@ -22,7 +21,6 @@ function Camera1({callback}) {
           onRead={handleBarCodeScanned}
          />
       </View>
-       
     </View>
   );
 }
@@ -32,6 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    height:250
   },
   view_camera: {
     flex:1,

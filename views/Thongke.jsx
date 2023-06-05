@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { Table, Row } from 'react-native-table-component';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-function Thongke() {
+function Thongke({hidemodal}) {
+
     const [tableHead, setTableHead] = useState(
         [
             'Mã QR',
@@ -18,9 +20,22 @@ function Thongke() {
             'Total_Qty'
         ]
     );
-    const [widthArr, setWidthArr] = useState([200, 150, 100, 100, 200, 80, 100, 100, 80, 100, 100]);
+    const [widthArr, setWidthArr] = useState([200, 150, 100, 100, 200, 80, 100, 200, 80, 100, 200]);
 
     const data = [
+        {
+            "Mã QR": "P89230418000042",
+            "Mã vật tư": "P890009570",
+            "Kệ": "O1-01",
+            "Nhà cung ứng": "CHIYA",
+            "Tên vật tư": "LJ B 0001 +DC",
+            "Màu": "A0QM",
+            "Số lượng": "33",
+            "Số phiếu": "20230401387",
+            "Cuộn": "6/6",
+            "Tên người dùng": "24972",
+            "Total_Qty": "1757,1000000"
+        },
         {
             "Mã QR": "P89230418000042",
             "Mã vật tư": "P890009570",
@@ -156,12 +171,15 @@ function Thongke() {
         item['Total_Qty']
     ])
 
-
     return (
         <View style={styles.container}>
             <View style={styles.top}>
-                <View style={{ flex: 1, alignItems: 'center' }}>
+                <View style={{ flex: 1, alignItems: 'center', flexDirection: 'row' }}>
+                    <TouchableOpacity style={{ flex: 1 }} onPress={hidemodal}>
+                        <Icon name="arrow-left" style={{ fontSize: 30, color: 'black',}} />
+                    </TouchableOpacity>
                     <Text style={styles.title}>Kiểm kê vật tư trong kho</Text>
+                    <View style={{ flex: 1 }}></View>
                 </View>
                 <View style={{ flex: 1, alignItems: 'flex-end' }}>
                     <TextInput style={styles.qrcode} />
@@ -252,23 +270,26 @@ const styles = StyleSheet.create({
         borderRadius: 15
     },
     text: {
-        fontSize: 15,
+        fontSize: 20,
         color: 'black',
         textAlign: 'center'
     },
     header_text: {
-        fontSize: 15,
+        fontSize: 20,
         color: 'blue',
         textAlign: 'center',
-        fontWeight:'500'
+        fontWeight: '500'
     },
     title: {
-        fontSize: 30,
+        fontSize: 40,
         color: '#070A52',
-        fontWeight:500,
+        fontWeight: 500,
+        flex: 2,
+        textAlign: 'center'
+
     },
     qrcode: {
-        color:'black',
+        color: 'black',
         marginRight: 10,
         width: '30%',
         borderColor: 'black',
@@ -278,5 +299,8 @@ const styles = StyleSheet.create({
         padding: 10
     },
     dataWrapper: { marginTop: -1 },
+    row: {
+        padding: 10
+    }
 })
 export default Thongke;
